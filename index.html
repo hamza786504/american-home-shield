@@ -17,9 +17,223 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Sales Force</title>
   </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    * {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+    :root {
+      --gray: #f0f1f1;
+      --dark-black: #525659;
+      --brown: #666666;
+      --blue: #1c74b0;
+      --navy-blue: #1d2744;
+      --sky: #42b7e6;
+      --red: #ee2f24;
+      --dark-gray: #ecedec;
+    }
+    body {
+      background-color: var(--dark-black);
+    }
+    .sales_force {
+      max-width: 768px;
+      width: 100%;
+      background-color: white;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+    .sales_force .notification_bar {
+      background-color: var(--brown);
+      padding: 20px 35px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sales_force .notification_bar p {
+      margin-bottom: 0;
+      flex-grow: 1;
+      font-size: 1.1rem;
+    }
+    .information_bar {
+      background-color: var(--gray);
+      text-align: center;
+    }
+    .information_bar p {
+      max-width: 470px;
+      margin: auto;
+    }
+    p.information_bar a {
+      color: inherit;
+    }
+    .logo_image .logo {
+      max-width: 70px;
+    }
+    .logo_cover {
+      max-width: 250px;
+    }
+    .logo_text {
+      text-align: right;
+      margin-right: 8px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .header {
+      padding: 25px 50px;
+    }
+    .message_section,
+    .information_bar,
+    .schedule_time,
+    .footer {
+      padding: 25px 50px;
+    }
+    .cta {
+      border-radius: 40px;
+      padding: 25px 40px;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+    .banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.548)),
+        url("../images/banner.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      aspect-ratio: 16/9;
+      padding: 50px 70px;
+    }
+    .banner_logo {
+      max-width: 250px;
+      width: 100%;
+    }
+    .message_section h2 {
+      color: var(--navy-blue);
+      font-size: 3.2rem;
+      font-weight: 900;
+      margin-bottom: 30px;
+    }
+    .message_section h2 span {
+      color: var(--red);
+    }
+    .letter p {
+      font-size: 1.3rem;
+    }
+    .letter h4 {
+      color: var(--navy-blue);
+      font-weight: 800;
+      margin-top: 30px;
+    }
+    .list {
+      padding: 0 50px;
+    }
+    .lists .list {
+      position: relative;
+    }
+    .lists .list::before {
+      content: "";
+      height: 100%;
+      width: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .lists .list:first-child::before {
+      background-color: var(--blue);
+    }
+    .lists .list:nth-child(2)::before {
+      background-color: var(--navy-blue);
+    }
+    .lists .list:last-child::before {
+      background-color: var(--sky);
+    }
+    .lists .list:first-child h3 {
+      color: var(--blue);
+    }
+    .lists .list:nth-child(2) h3 {
+      color: var(--navy-blue);
+    }
+    .lists .list:nth-child(3) h3 {
+      color: var(--sky);
+    }
+    .lists .list h3 span {
+      color: var(--navy-blue);
+    }
+    .lists .list h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .lists .list p {
+      font-size: 1.2rem;
+    }
+    .lists ul {
+      width: 50%;
+      padding-left: 18px;
+    }
+
+    .download {
+      background-color: var(--dark-gray);
+      padding: 50px;
+    }
+    .download .image {
+      max-width: 200px;
+      width: 100%;
+    }
+    .download h3 {
+      font-size: 1.6rem;
+      color: var(--blue);
+      font-weight: 800;
+    }
+    .download p {
+      font-size: 1.2rem;
+    }
+    .cta_primary {
+      background-color: var(--blue);
+      color: white;
+    }
+    .cta_secondary {
+      border: 1px solid var(--navy-blue);
+      color: var(--navy-blue);
+      padding: 20px 40px;
+    }
+    .schedule_time p {
+      font-size: 1.3rem;
+    }
+    .schedule_time {
+      background-color: var(--navy-blue);
+      color: white;
+    }
+    .schedule_time .icon {
+      font-size: 70px;
+    }
+    .schedule_time a {
+      color: inherit;
+    }
+    footer.footer {
+      background-color: var(--dark-gray);
+    }
+    .footer .detail img {
+      max-width: 130px;
+    }
+    .footer .detail table td {
+      font-weight: 600;
+    }
+    .footer h6 {
+      font-weight: 700;
+    }
+    .footer p,
+    .footer a {
+      text-align: start;
+      font-size: 0.9rem;
+    }
+  </style>
   <body>
     <div class="sales_force">
       <div class="notification_bar">
@@ -168,7 +382,12 @@
         </p>
         <div class="d-flex align-items-center justify-content-start">
           <i class="fa-solid icon fa-laptop"></i>
-          <h2 class="ms-4">Schedule time to talk or visit <br /><a href="www.ahs.com/realestate">ahs.com/realestate</a>.</h2>
+          <h2 class="ms-4">
+            Schedule time to talk or visit <br /><a
+              href="www.ahs.com/realestate"
+              >ahs.com/realestate</a
+            >.
+          </h2>
         </div>
       </div>
       <footer class="footer">
@@ -208,20 +427,40 @@
           </div>
         </div>
         <p class="mt-3">
-          See the <a href="/">plan agreement</a> for coverage details, including service fees, limitations and exclusions. Coverage limits and charges for non-covered items may apply.
+          See the <a href="/">plan agreement</a> for coverage details, including
+          service fees, limitations and exclusions. Coverage limits and charges
+          for non-covered items may apply.
         </p>
-        <h6 class="mb-3">New Jersey Residents: The product being offered is a service contract and is separate
-          and distinct from any product or service warranty which may be provided by the home
-          builder or manufacturer.</h6>
-          <p class="mb-2">*Roof leak repair coverage not available for condos/townhomes/mobile homes. For buyer use only.</p>
-          <p class="mb-2">**HVAC tune-ups are available seasonally (spring: A/C; fall: heating) and offered by a third party. The
-            first tune-up of one unit is included for free per contract term. Service dates are limited and may vary
-            based upon location. For buyer use only.</p>
-            <p class="mb-2">†Rekey service is an added benefit and may be offered by a third party. For buyer use only</p>
-            <p class="mb-2">American Home Shield, 3400 Players Club Parkway Suite 300 Memphis, TN 38125</p>
-            <p class="mb-2">We respect your privacy. View our policy.</p>
-            <a class="d-inline-block mb-2" style="color: var(--navy-blue);" href="/">Unsubscribe</a>
-            <p class="mb-2">© 2023 American Home Shield Corporation. All rights reserved.</p>
+        <h6 class="mb-3">
+          New Jersey Residents: The product being offered is a service contract
+          and is separate and distinct from any product or service warranty
+          which may be provided by the home builder or manufacturer.
+        </h6>
+        <p class="mb-2">
+          *Roof leak repair coverage not available for condos/townhomes/mobile
+          homes. For buyer use only.
+        </p>
+        <p class="mb-2">
+          **HVAC tune-ups are available seasonally (spring: A/C; fall: heating)
+          and offered by a third party. The first tune-up of one unit is
+          included for free per contract term. Service dates are limited and may
+          vary based upon location. For buyer use only.
+        </p>
+        <p class="mb-2">
+          †Rekey service is an added benefit and may be offered by a third
+          party. For buyer use only
+        </p>
+        <p class="mb-2">
+          American Home Shield, 3400 Players Club Parkway Suite 300 Memphis, TN
+          38125
+        </p>
+        <p class="mb-2">We respect your privacy. View our policy.</p>
+        <a class="d-inline-block mb-2" style="color: var(--navy-blue)" href="/"
+          >Unsubscribe</a
+        >
+        <p class="mb-2">
+          © 2023 American Home Shield Corporation. All rights reserved.
+        </p>
       </footer>
     </div>
 
